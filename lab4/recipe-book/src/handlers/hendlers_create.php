@@ -5,7 +5,7 @@ session_start();
 
 require_once __DIR__ . '/../hendlers.php';
 
-// Получаем данные
+
 $title = trim($_POST['title'] ?? '');
 $category = trim($_POST['category'] ?? '');
 $ingredients = trim($_POST['ingredients'] ?? '');
@@ -15,7 +15,7 @@ $steps = trim($_POST['steps'] ?? '');
 
 $errors = [];
 
-// Простая валидация
+
 if ($title === '')
     $errors['title'] = 'Введите название';
 if ($category === '')
@@ -27,7 +27,6 @@ if ($description === '')
 if ($steps === '')
     $errors['steps'] = 'Введите шаги';
 
-// При ошибках — сохраняем и перенаправляем
 if (!empty($errors)) {
     $_SESSION['errors'] = $errors;
     $_SESSION['form_data'] = $_POST;
@@ -35,7 +34,6 @@ if (!empty($errors)) {
     exit;
 }
 
-// Сохраняем рецепт
 $recipe = [
     'title' => $title,
     'category' => $category,

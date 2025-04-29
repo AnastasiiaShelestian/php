@@ -1,12 +1,11 @@
 <?php
 declare(strict_types=1);
 
-// Подключаем вспомогательные функции
+
 require_once __DIR__ . '/../src/handlers.php';
 
-// Загружаем рецепты
 $recipes = loadRecipes();
-$latestRecipes = array_slice($recipes, -2); // последние два рецепта
+$latestRecipes = array_slice($recipes, -2);
 ?>
 <!DOCTYPE html>
 <html lang="ru">
