@@ -16,7 +16,7 @@ session_unset();
 <body class="bg-gray-100 font-sans leading-normal tracking-normal">
     <div class="max-w-3xl mx-auto bg-white p-6 rounded-md shadow-md mt-8">
         <h1 class="text-2xl font-bold mb-6 text-center text-gray-700">Добавить рецепт</h1>
-        <form action="../../src/handlers/handle_create.php" method="POST">
+        <form action="../../handlers/handle_create.php" method="POST">
             <div class="mb-4">
                 <label for="title" class="block text-sm font-medium text-gray-700">Название рецепта</label>
                 <input type="text" name="title" id="title"
@@ -84,4 +84,4 @@ session_unset();
     </div>
 </body>
 
-</html>ы
+</html>
